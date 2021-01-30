@@ -1,0 +1,13 @@
+$item-size: 210px;
+$col-gutter: 10px;
+$vp-gutter: $col-gutter;
+$max-cols: 5;
+$scrollbar-size: 20px;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $item-size);
+  grid-gap: $col-gutter;
+  padding: 0 $vp-gutter;
+
+}
