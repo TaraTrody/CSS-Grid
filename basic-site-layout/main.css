@@ -29,7 +29,9 @@ main p {
   grid-template-rows: 3rem;
   gap: 2rem 1rem;
   grid-template-areas: "logo menu menu"
-                        "content content sidebar";
+                        "content content sidebar"
+                        "sponsor sponsor sponsor"
+                        "footer footer footer";
 }
 
 .logo {
@@ -72,6 +74,10 @@ main p {
 
 .sponsors-wrapper {
   grid-area: sponsor;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
 }
 
 .footer {
