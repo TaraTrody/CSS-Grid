@@ -28,7 +28,8 @@ main p {
   grid-template-columns: 2fr 6fr 4fr;
   grid-template-rows: 3rem;
   gap: 2rem 1rem;
-  grid-template-areas: "logo menu menu";
+  grid-template-areas: "logo menu menu"
+                        "content content sidebar";
 }
 
 .logo {
@@ -60,11 +61,13 @@ main p {
 }
 
 .content-area {
-  grid-area: main;
+  grid-area: content;
 }
 
 .sidebar {
   grid-area: sidebar;
+  padding: 1rem;
+  justify-self: center;
 }
 
 .sponsors-wrapper {
