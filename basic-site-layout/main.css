@@ -95,3 +95,19 @@ main p {
 .footer {
   grid-area: footer;
 }
+
+@media all and (max-width: 992px) {
+  .container {
+    margin: 0 1rem ;
+  }
+  .sponsors {
+    column-gap: 0.5rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    grid-template-areas: 
+              "logo menu";
+  }
+}
