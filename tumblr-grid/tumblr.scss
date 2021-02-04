@@ -11,3 +11,7 @@ $scrollbar-size: 20px;
   padding: 0 $vp-gutter;
 
 }
+@function grid-width($num-cols) {
+  @return $num-cols * $item-size + 
+   ($num-cols - 1) * $col-gutter;
+}
