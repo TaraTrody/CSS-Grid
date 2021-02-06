@@ -50,3 +50,98 @@ $scrollbar-size: 20px;
   height: 100%;
   object-fit: cover;
 }
+
+.grid .card h2 {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 10px;
+
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+
+  color: #fff;
+
+  background-image: radial-gradient(ellipse at center, transparent 0,
+                                    rgba(0,0,0, .36) 100%);
+ }
+
+ .grid .header {
+   box-sizing: border-box;
+
+   text-align: center;
+   padding-top: 23px;
+
+   font-size: 1.6875em;
+   line-height: 1.3;
+
+   background: radial-gradient(ellipse at center,
+                  transparent 0, rgba(0,0,0, 0.48) 
+                  100%) hsla(0, 0%, 27%, 1);
+}
+
+.grid .header h1 {
+  margin-top: 0;
+  margin-bottom: 0.673em;
+
+  font-family: 'Cherry Swash', cursive;
+  text-transform: capitalize;
+  font-size: 1em;
+  font-weight: normal;
+
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.grid .header p {
+  margin: 0;
+
+  font-family:'Raleway', sans-serif;
+  font-size: 0.52em;
+
+  padding-left: 34px;
+  padding-right: 34px;
+
+}
+
+@include when-n-cols(2) {
+  .grid .header{
+    font-size: 2.5em;
+    padding-top: 100px;
+  }
+  .grid .header h1 {
+    padding-left: 80px;
+    padding-right: 80px
+  }
+
+  .grid .header p {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+.grid .card:hover {
+  transform: scale(0.95);
+}
+
+.grid .header:hover {
+  transform: none;
+}
+
+.grid .card {
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.grid .card a:focus {
+  outline: none;
+}
+
+.grid .card:focus-within {
+  transform: scale(0.95);
+}
