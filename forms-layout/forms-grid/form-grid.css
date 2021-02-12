@@ -1,0 +1,119 @@
+/* basic styles */
+body, input, textarea, select, option, button, label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  background-color: #9bd;
+}
+
+p {
+  max-width: 40em;
+  margin: 1em auto;
+}
+
+fieldset {
+  max-width: 40em;
+  padding: 4px;
+  margin: 2em auto;
+  border: 0 none;
+}
+
+legend {
+  font-size: 1.2em;
+  width: 100%;
+  border-bottom: 1px dotted #99c;
+}
+
+input, output, textarea, select, button {
+  box-sizing: border-box;
+  padding: 0.2em 0.4em;
+  margin: 0.2em 0;
+  outline: 0 none;
+  border: 0 none;
+  box-shadow: none;
+}
+
+button {
+  max-width: 9em;
+  padding: 0.2em 2em;
+  background-color: #ddd;
+  box-shadow: 0 2px 0 #bbb;
+  cursor: pointer;
+}
+
+label {
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+}
+
+input:focus + label, textarea:focus + label, select:focus + label {
+  color: #933;
+}
+
+input:checked + label {
+  font-weight: bold;
+}
+
+/* fallback 30%/70% float layout */
+input, output, textarea, select, button {
+  clear: both;
+  float: right;
+  width: 70%;
+}
+
+label {
+  float: left;
+  width: 30%;
+  text-align: right;
+  padding: 0.25em 1em 0 0;
+}
+
+button, input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  float: left;
+  margin: 0.5em 0.5em 0 30%;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+  width: auto;
+  text-align: left;
+}
+
+/* grid layout */
+@supports (display: grid) {
+ 
+  .formgrid {
+    display: grid;
+    grid-template-columns: 1fr 1em 2fr;
+    grid-gap: 0.3em 0.6em;
+    grid-auto-flow: dense;
+    align-items: center;
+  }
+  
+  input, output, textarea, select, button {
+    grid-column: 2 / 4;
+    width: auto;
+    margin: 0;
+  }
+  
+  input[type="checkbox"], input[type="radio"] {
+    grid-column: 1 / 3;
+    justify-self: end;
+    margin: 0;
+  }
+  
+  label, input[type="checkbox"] + label, input[type="radio"] + label {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  
+  textarea + label {
+    align-self: start;
+  }
+  
+}
