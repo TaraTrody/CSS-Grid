@@ -1,3 +1,18 @@
+*, 
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#f2f2f2; 
+}
+.box {
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
 .app-layout {
   display: grid;
   height: 100vh;
@@ -5,27 +20,58 @@
   grid-template-rows: auto 1fr auto;
 }
 
+.headers     { background-color: #ffffff; }
+.teams      { background-color: #362233; }
+.channels   { background-color: #52364E; }
+.messages   { background-color: #ffffff; }
+
 .teams {
   grid-column: 1;
   grid-row: 1 / 4;
+ 
 }
 
 .channels {
   grid-column: 2;
   grid-row: 1 / 4;
+  
 }
 
-.header {
+.headers {
   grid-column: 3;
-  grid-row: 1 
+  grid-row: 1;
+  color: #333;
+  border-bottom: 1px solid #f2f2f2;
+ 
 }
 
 .messages {
   grid-column: 3;
-  grid-row: 2
+  grid-row: 2;
+  padding: 0 1rem;
+  overflow-y: scroll;
+}
+
+.message-list {
+  margin: 0;
+  padding: 0;
+}
+
+.message-list li {
+  padding: .2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #f2f2f2;
 }
 
 .input {
   grid-column: 3;
   grid-row: 3
+}
+
+input {
+  width: 100%;
+  padding: 1em;
+  outline: none;
+  border: 1px solid #f2f2f2;
 }
