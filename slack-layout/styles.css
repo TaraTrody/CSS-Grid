@@ -4,3 +4,28 @@
   grid-template-columns: 100px 250px 1fr;
   grid-template-rows: auto 1fr auto;
 }
+
+.teams {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+.channels {
+  grid-column: 2;
+  grid-row: 1 / 4;
+}
+
+.header {
+  grid-column: 3;
+  grid-row: 1 
+}
+
+.messages {
+  grid-column: 3;
+  grid-row: 2
+}
+
+.input {
+  grid-column: 3;
+  grid-row: 3
+}
