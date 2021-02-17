@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px auto;
+  width: 700px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  margin: 25px;
+  margin-bottom: 50px;
+  font-size: 2em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(4, 120px);
+  gap: 10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.4em;
+  margin: 40px 30px;
+
+}
+
+.item {
+  border: 2px dotted blue;
+  padding: 20px 40px;
+  
+}
+
+.a,
+.b,
+.c {
+  background: orange;
+  align-self: start;
+}
+
+.d,
+.e,
+.f {
+  background: pink;
+  align-self: center;
+}
+
+.g,
+.h,
+.i {
+  background: green;
+  align-self: center;
+}
+
+.j,
+.k,
+.l {
+  background: lightblue;
+  align-self: stretch;
+}
