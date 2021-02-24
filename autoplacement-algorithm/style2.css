@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px auto;
+  width: 600px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 180px 180px 180px;
+  gap: 10px;
+}
+
+.item {
+  border: solid;
+padding: 40px;
+font-size: 1.4em;
+}
+
+.b {
+  grid-area: 2 / 1 /  4 / 3;
+}
